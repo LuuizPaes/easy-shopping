@@ -7,30 +7,31 @@
 }
 
 .wrapper {
-    height: 100vh;
+    height: 100wh;
     width: 100vw;
 }
 
 .container-left {
     display: inline-block;
-    width: 60%;
+    width: 65%;
     padding-left: 136px;
-    margin-top: 20%;
+    margin-top: 25%;
 }
 
 .container-right {
     display: inline-block;
     background-color: rgba(93, 93, 125, 0.16);
-    height: 100vh;
+    height: 56em;
     width: 40%;
     position: absolute;
+    z-index: 1;
 
 }
 
 img {
     position: relative;
-    top: 25%;
-    right: 130px;
+    top: 20%;
+    right: 140px;
 }
 
 h1 {
@@ -95,6 +96,24 @@ header {
     margin: 25px 0 0 57px;
 }
 
+footer {
+    background: #9499EA;
+    width: 100%;
+    padding: 26px;
+    margin-top: 30px;
+    position: relative;
+    width: 100vw;
+    bottom: 0;
+    z-index: 2;
+  }
+
+  h2 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: lighter;
+    text-align: center;
+  }
+
 @media screen and (max-width: 900px) {
     .container-left {
         width: 100%;
@@ -142,10 +161,42 @@ header {
         display: block;
         }
 
+        footer {
+            position: static;
+            margin: auto;
+        }
+
+        
+
 }
 
-@media screen and (max-width: 330px) {
-    .container-left {
-        height: 70%;
+/* Responsivo para celulares pequenos (abaixo de 375px) */
+@media screen and (max-width: 375px) {
+
+    .left-container {
+      padding: 50px 0;
     }
-}
+  
+    h1 {
+      padding: 0 50px 0 50px;
+      font-size: 30px;
+    }
+  
+    p {
+      padding: 15px 40px;  
+    }
+  
+    button {
+      max-width: 70%;
+      font-size: 1.4rem;
+    }
+  
+    img {
+      padding: 50px 0;
+    }
+  
+    footer {
+      margin-top: 0;
+      position: static;
+    }
+  }
